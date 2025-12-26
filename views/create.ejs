@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create New Hisaab</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2>Khaatabook</h2>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/create">Create New Hisaab</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h3>Create New Hisaab</h3>
+
+    <form action="/createhisaab" method="POST" class="create-form">
+
+      <!-- Title Input -->
+      <input 
+        type="text" 
+        name="title" 
+        placeholder="Shopping Hisaab, Ghar ka Kharcha..." 
+        class="input-box"
+        required
+      >
+
+      <!-- Text Area -->
+      <textarea 
+        name="content" 
+        placeholder="Daal, Aata, Cheeni" 
+        class="textarea-box"
+        required
+      ></textarea>
+
+      <!-- Button -->
+      <button type="submit" class="btn-primary">
+        Create New Hisaab
+      </button>
+
+    </form>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Hisaab</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2>Khaatabook</h2>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/create">Create New Hisaab</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h3>
+      You're editing hisaab of
+      <span class="highlight"><%= filename.replace(".txt","") %></span>
+      date
+    </h3>
+
+    <form action="/update/<%= filename %>" method="POST" class="edit-form">
+
+      <textarea
+        name="content"
+        class="textarea-box"
+        required
+      ><%= data %></textarea>
+
+      <button type="submit" class="btn-primary">
+        Update Hisaab
+      </button>
+
+    </form>
+  </main>
+
+</body>
+</html>

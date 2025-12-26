@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>View Hisaab</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2>Khaatabook</h2>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/create">Create New Hisaab</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <h3 class="view-heading">
+      hisaab of
+      <span class="highlight"><%= filename.replace(".txt", "") %></span>
+      date
+    </h3>
+
+    <p class="view-content">
+      <%= data %>
+    </p>
+
+    <a href="/edit/<%= filename %>" class="edit-link">
+      Edit Hisaab
+    </a>
+
+  </main>
+
+</body>
+</html>

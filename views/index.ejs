@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <meta charset="UTF-8">
+  <title>Khaatabook</title>
+  <link rel="stylesheet" href="/style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2>Khaatabook</h2>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/create">Create New Hisaab</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h3>All Hisaab Kitaab</h3>
+
+    <!-- Dummy Card -->
+     <% if (files.length === 0) { %>
+  <p>No Hisaab Kitaab found. <a href="/create">Create one now!</a></p>
+<% } else { %>
+
+  <% files.forEach(function(file) { %>
+    <div class="hisaab-card">
+      <span class="date"><%= file.split(".")[0] %></span>
+
+      <div class="icons">
+        <a href="/view/<%= file %>" title="View">
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <a href="/edit/<%= file %>" title="Edit">
+          <i class="fa-solid fa-pen"></i>
+        </a>
+
+        <a href="/delete/<%= file %>" title="Delete">
+          <i class="fa-solid fa-trash"></i>
+        </a>
+      </div>
+    </div>
+  <% }) %>
+
+<% } %>
+
+    
+
+  </main>
+
+</body>
+</html>
